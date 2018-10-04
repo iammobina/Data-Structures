@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using A2;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,7 +13,7 @@ namespace TestCommon
     {
         private static readonly char[] IgnoreChars = new char[] { '\n', '\r', ' ' };
 
-        public static void RunLocalTest(Func<string,string> Processor)
+        public static void RunLocalTest(Func<string,string> Process)
         {
             Assert.IsTrue(Directory.Exists("TestData"));
             string[] inFiles = Directory.GetFiles("TestData", "*In_*.txt");
@@ -27,7 +28,7 @@ namespace TestCommon
                 Assert.IsTrue(File.Exists(outFile));
                 try
                 {
-                    string result = Processor(File.ReadAllText(inFile));
+                    string result = Program.Process(File.ReadAllText(inFile));
                     Assert.AreEqual(
                         result.Trim(IgnoreChars),
                         File.ReadAllText(outFile).Trim(IgnoreChars));

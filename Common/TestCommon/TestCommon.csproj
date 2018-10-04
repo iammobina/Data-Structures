@@ -45,5 +45,11 @@
     <Compile Include="TestCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Users\Mobina\Documents\Visual Studio 2017\Projects\A2\A2\A2.csproj">
+      <Project>{28722A22-1E77-40EE-894A-2F8191F950CA}</Project>
+      <Name>A2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
