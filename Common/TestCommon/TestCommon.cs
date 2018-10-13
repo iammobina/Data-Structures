@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace TestCommon
 {
     public class TestTools 
@@ -32,7 +33,7 @@ namespace TestCommon
                 Assert.IsTrue(File.Exists(outFile));
                 try
                 {
-                    string result = Program.Process(File.ReadAllText(inFile));
+                    string result = Process(File.ReadAllText(inFile));
                     Assert.AreEqual(
                         result.Trim(IgnoreChars),
                         File.ReadAllText(outFile).Trim(IgnoreChars));
