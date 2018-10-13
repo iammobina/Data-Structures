@@ -17,6 +17,7 @@ namespace A3.Tests
             Assert.AreEqual(Program.Fibonacci(10),55);
         }
 
+        [DeploymentItem("TestData", "A3_TestData")]
         [TestMethod()]
         public void Graded_FibonacciTest()
         {
@@ -24,6 +25,7 @@ namespace A3.Tests
         }
 
 
+        [DeploymentItem("TestData", "A3_TestData")]
         [TestMethod()]
         public void Graded_FibonacciLastDigitTest()
         {
@@ -42,6 +44,7 @@ namespace A3.Tests
             Assert.AreEqual(Program.GCD(81,6), 3);
         }
 
+        [DeploymentItem("TestData", "A3_TestData")]
         [TestMethod()]
         public void Graded_GCDTest()
         {
@@ -49,6 +52,7 @@ namespace A3.Tests
         }
 
 
+        [DeploymentItem("TestData", "A3_TestData")]
         [TestMethod()]
         public void Graded_LCMTest()
         {
@@ -67,6 +71,7 @@ namespace A3.Tests
             Assert.AreEqual(Program.Fibonacci_Mod(2015,3),1);
         }
 
+        [DeploymentItem("TestData", "A3_TestData")]
         [TestMethod()]
         public void Graded_FibonacciModTest()
         {
@@ -75,11 +80,13 @@ namespace A3.Tests
         
 
         [TestMethod()]
+        [DeploymentItem("TestData", "A3_TestData")]
         public void Graded_FibonacciSumTest()
         {
             TestCommon.TestTools.RunLocalTest("A3", Program.ProcessFibonacci_Sum, "TD6");
         }
 
+        [DeploymentItem("TestData", "A3_TestData")]
         [TestMethod()]
         public void Graded_FibonacciPartialSumTest()
         {
@@ -87,6 +94,7 @@ namespace A3.Tests
         }
 
         [TestMethod()]
+        [DeploymentItem("TestData", "A3_TestData")]
         public void Graded_FibonacciSumSquare()
         {
             TestCommon.TestTools.RunLocalTest("A3", Program.ProcessFibonacci_Sum_Squares, "TD8");
