@@ -12,9 +12,9 @@ namespace TestCommon
     {
         private static readonly char[] IgnoreChars = new char[] { '\n', '\r', ' ' };
 
-        public static void RunLocalTest(string A2, Func<string,string> Processor, string TestDataName=null)
+        public static void RunLocalTest(string AssignmentName, Func<string,string> Processor, string TestDataName=null)
         {
-            string testDataPath = $"{A2}_TestData";
+            string testDataPath = $"{AssignmentName}_TestData";
             if (!string.IsNullOrEmpty(TestDataName))
                 testDataPath = Path.Combine(testDataPath, TestDataName);
 
