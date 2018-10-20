@@ -116,9 +116,6 @@ namespace A4
                 CopyStartPoint.Remove(StartPoint[0]);
                 StartPoint = new List<long>(CopyStartPoint);
                 point++;
-
-
-
             }
 
             return point;
@@ -150,7 +147,7 @@ namespace A4
             return Result;
         }
 
-        public static string ProcessMaximizeNumberOfPricePlaces51(string inStr) => TestTools.Process(inStr, (Func<long, long[]>)MaximizeNumberOfPricePlaces5);
+        public static string ProcessMaximizeNumberOfPricePlaces5(string inStr) => TestTools.Process(inStr, (Func<long, long[]>)MaximizeNumberOfPricePlaces5);
         public static long[] MaximizeNumberOfPricePlaces5(long n)
         {
             List<long> SumList = new List<long>();

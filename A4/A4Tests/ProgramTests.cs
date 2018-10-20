@@ -44,7 +44,7 @@ namespace A4.Tests
         [DeploymentItem(@"TestData", "A4_TestData")]
         public void MaximizeNumberOfPricePlaces5Test()
         {
-            TestTools.RunLocalTest("A4", Program.ProcessMaximizeNumberOfPricePlaces51, "TD5");
+            TestTools.RunLocalTest("A4", Program.ProcessMaximizeNumberOfPricePlaces5, "TD5");
         }
 
 
