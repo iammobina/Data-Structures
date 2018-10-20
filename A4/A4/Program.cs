@@ -10,10 +10,7 @@ namespace A4
     public class Program
     {
         static void Main(string[] args)
-        {
-
-            CollectingSingnatures4(4, new long[] { 4, 1, 2, 5 }, new long[] { 7, 3, 5, 6 });
-        }
+        { }
 
         public static string ProcessChangingMoney1(string inStr) => TestTools.Process(inStr, (Func<long, long>)ChangingMoney1);
         public static long ChangingMoney1(long money)

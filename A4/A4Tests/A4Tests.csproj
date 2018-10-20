@@ -58,15 +58,15 @@
   <ItemGroup>
     <Compile Include="ProgramTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  <Content Include="TestData\**">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
+    <Content Include="TestData\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\git\96522321\DS97981\Common\TestCommon\TestCommon.csproj">
+    <ProjectReference Include="..\..\Common\TestCommon\TestCommon.csproj">
       <Project>{c39ff0c4-6960-42ad-8e2c-d2cafe850a52}</Project>
       <Name>TestCommon</Name>
     </ProjectReference>
