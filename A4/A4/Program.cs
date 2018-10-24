@@ -118,7 +118,7 @@ namespace A4
             return point;
         }
 
-        public static string ProcessMaximizeSalary6(string inStr) => TestTools.Process(inStr, MaximizeSalary6);
+        public static string ProcessMaximizeSalary6(string inStr) => TestTools.Process(inStr,(Func<long,long[],string>) MaximizeSalary6);
         public static string MaximizeSalary6(long n, long[] numbers)
         {
             List<long> ListNumbers = new List<long>(numbers);
