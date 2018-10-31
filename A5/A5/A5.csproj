@@ -47,10 +47,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\git\96522321\DS97981\Common\TestCommon\TestCommon.csproj">
+    <ProjectReference Include="..\..\Common\TestCommon\TestCommon.csproj">
       <Project>{C39FF0C4-6960-42AD-8E2C-D2CAFE850A52}</Project>
       <Name>TestCommon</Name>
     </ProjectReference>

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E7DB40BA-BD61-40A9-9E88-19E07F8B36E5}</ProjectGuid>
+    <ProjectGuid>{5E026CC6-756E-4854-9BB7-A0CD721ECD30}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>A5Tests</RootNamespace>
-    <AssemblyName>A5Tests</AssemblyName>
+    <RootNamespace>A5Tests1</RootNamespace>
+    <AssemblyName>A5Tests1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -58,76 +58,18 @@
   <ItemGroup>
     <Compile Include="ProgramTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="TestData/**">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TestData\TD1\In_1.txt" />
-    <Content Include="TestData\TD1\In_2.txt" />
-    <Content Include="TestData\TD1\In_3.txt" />
-    <Content Include="TestData\TD1\In_4.txt" />
-    <Content Include="TestData\TD1\In_5.txt" />
-    <Content Include="TestData\TD1\Out_1.txt" />
-    <Content Include="TestData\TD1\Out_2.txt" />
-    <Content Include="TestData\TD1\Out_3.txt" />
-    <Content Include="TestData\TD1\Out_4.txt" />
-    <Content Include="TestData\TD1\Out_5.txt" />
-    <Content Include="TestData\TD2\In_1.txt" />
-    <Content Include="TestData\TD2\In_2.txt" />
-    <Content Include="TestData\TD2\In_3.txt" />
-    <Content Include="TestData\TD2\In_4.txt" />
-    <Content Include="TestData\TD2\In_5.txt" />
-    <Content Include="TestData\TD2\Out_1.txt" />
-    <Content Include="TestData\TD2\Out_2.txt" />
-    <Content Include="TestData\TD2\Out_3.txt" />
-    <Content Include="TestData\TD2\Out_4.txt" />
-    <Content Include="TestData\TD2\Out_5.txt" />
-    <Content Include="TestData\TD3\In_1.txt" />
-    <Content Include="TestData\TD3\In_2.txt" />
-    <Content Include="TestData\TD3\In_3.txt" />
-    <Content Include="TestData\TD3\In_4.txt" />
-    <Content Include="TestData\TD3\In_5.txt" />
-    <Content Include="TestData\TD3\Out_1.txt" />
-    <Content Include="TestData\TD3\Out_2.txt" />
-    <Content Include="TestData\TD3\Out_3.txt" />
-    <Content Include="TestData\TD3\Out_4.txt" />
-    <Content Include="TestData\TD3\Out_5.txt" />
-    <Content Include="TestData\TD4\In_1.txt" />
-    <Content Include="TestData\TD4\In_2.txt" />
-    <Content Include="TestData\TD4\In_3.txt" />
-    <Content Include="TestData\TD4\In_4.txt" />
-    <Content Include="TestData\TD4\In_5.txt" />
-    <Content Include="TestData\TD4\Out_1.txt" />
-    <Content Include="TestData\TD4\Out_2.txt" />
-    <Content Include="TestData\TD4\Out_3.txt" />
-    <Content Include="TestData\TD4\Out_4.txt" />
-    <Content Include="TestData\TD4\Out_5.txt" />
-    <Content Include="TestData\TD5\In_1.txt" />
-    <Content Include="TestData\TD5\In_2.txt" />
-    <Content Include="TestData\TD5\In_3.txt" />
-    <Content Include="TestData\TD5\In_4.txt" />
-    <Content Include="TestData\TD5\In_5.txt" />
-    <Content Include="TestData\TD5\Out_1.txt" />
-    <Content Include="TestData\TD5\Out_2.txt" />
-    <Content Include="TestData\TD5\Out_3.txt" />
-    <Content Include="TestData\TD5\Out_4.txt" />
-    <Content Include="TestData\TD5\Out_5.txt" />
-    <Content Include="TestData\TD6\In_1.txt" />
-    <Content Include="TestData\TD6\In_2.txt" />
-    <Content Include="TestData\TD6\In_3.txt" />
-    <Content Include="TestData\TD6\In_4.txt" />
-    <Content Include="TestData\TD6\In_5.txt" />
-    <Content Include="TestData\TD6\Out_1.txt" />
-    <Content Include="TestData\TD6\Out_2.txt" />
-    <Content Include="TestData\TD6\Out_3.txt" />
-    <Content Include="TestData\TD6\Out_4.txt" />
-    <Content Include="TestData\TD6\Out_5.txt" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\TestCommon\TestCommon.csproj">
       <Project>{C39FF0C4-6960-42AD-8E2C-D2CAFE850A52}</Project>
       <Name>TestCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\A5\A5.csproj">
+      <Project>{D019A4E9-DF33-4444-BFFD-6F1C5DCFA820}</Project>
+      <Name>A5</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
