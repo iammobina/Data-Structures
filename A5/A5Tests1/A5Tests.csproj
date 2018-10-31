@@ -60,6 +60,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TestData/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +76,68 @@
       <Project>{D019A4E9-DF33-4444-BFFD-6F1C5DCFA820}</Project>
       <Name>A5</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\TD1\In_1.txt" />
+    <Content Include="TestData\TD1\In_2.txt" />
+    <Content Include="TestData\TD1\In_3.txt" />
+    <Content Include="TestData\TD1\In_4.txt" />
+    <Content Include="TestData\TD1\In_5.txt" />
+    <Content Include="TestData\TD1\Out_1.txt" />
+    <Content Include="TestData\TD1\Out_2.txt" />
+    <Content Include="TestData\TD1\Out_3.txt" />
+    <Content Include="TestData\TD1\Out_4.txt" />
+    <Content Include="TestData\TD1\Out_5.txt" />
+    <Content Include="TestData\TD2\In_1.txt" />
+    <Content Include="TestData\TD2\In_2.txt" />
+    <Content Include="TestData\TD2\In_3.txt" />
+    <Content Include="TestData\TD2\In_4.txt" />
+    <Content Include="TestData\TD2\In_5.txt" />
+    <Content Include="TestData\TD2\Out_1.txt" />
+    <Content Include="TestData\TD2\Out_2.txt" />
+    <Content Include="TestData\TD2\Out_3.txt" />
+    <Content Include="TestData\TD2\Out_4.txt" />
+    <Content Include="TestData\TD2\Out_5.txt" />
+    <Content Include="TestData\TD3\In_1.txt" />
+    <Content Include="TestData\TD3\In_2.txt" />
+    <Content Include="TestData\TD3\In_3.txt" />
+    <Content Include="TestData\TD3\In_4.txt" />
+    <Content Include="TestData\TD3\In_5.txt" />
+    <Content Include="TestData\TD3\Out_1.txt" />
+    <Content Include="TestData\TD3\Out_2.txt" />
+    <Content Include="TestData\TD3\Out_3.txt" />
+    <Content Include="TestData\TD3\Out_4.txt" />
+    <Content Include="TestData\TD3\Out_5.txt" />
+    <Content Include="TestData\TD4\In_1.txt" />
+    <Content Include="TestData\TD4\In_2.txt" />
+    <Content Include="TestData\TD4\In_3.txt" />
+    <Content Include="TestData\TD4\In_4.txt" />
+    <Content Include="TestData\TD4\In_5.txt" />
+    <Content Include="TestData\TD4\Out_1.txt" />
+    <Content Include="TestData\TD4\Out_2.txt" />
+    <Content Include="TestData\TD4\Out_3.txt" />
+    <Content Include="TestData\TD4\Out_4.txt" />
+    <Content Include="TestData\TD4\Out_5.txt" />
+    <Content Include="TestData\TD5\In_1.txt" />
+    <Content Include="TestData\TD5\In_2.txt" />
+    <Content Include="TestData\TD5\In_3.txt" />
+    <Content Include="TestData\TD5\In_4.txt" />
+    <Content Include="TestData\TD5\In_5.txt" />
+    <Content Include="TestData\TD5\Out_1.txt" />
+    <Content Include="TestData\TD5\Out_2.txt" />
+    <Content Include="TestData\TD5\Out_3.txt" />
+    <Content Include="TestData\TD5\Out_4.txt" />
+    <Content Include="TestData\TD5\Out_5.txt" />
+    <Content Include="TestData\TD6\In_1.txt" />
+    <Content Include="TestData\TD6\In_2.txt" />
+    <Content Include="TestData\TD6\In_3.txt" />
+    <Content Include="TestData\TD6\In_4.txt" />
+    <Content Include="TestData\TD6\In_5.txt" />
+    <Content Include="TestData\TD6\Out_1.txt" />
+    <Content Include="TestData\TD6\Out_2.txt" />
+    <Content Include="TestData\TD6\Out_3.txt" />
+    <Content Include="TestData\TD6\Out_4.txt" />
+    <Content Include="TestData\TD6\Out_5.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

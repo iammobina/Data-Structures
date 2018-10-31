@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A5", "A5\A5.csproj", "{D019
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCommon", "..\Common\TestCommon\TestCommon.csproj", "{C39FF0C4-6960-42AD-8E2C-D2CAFE850A52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A5Tests1", "A5Tests1\A5Tests1.csproj", "{5E026CC6-756E-4854-9BB7-A0CD721ECD30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A5Tests", "A5Tests1\A5Tests.csproj", "{5E026CC6-756E-4854-9BB7-A0CD721ECD30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
