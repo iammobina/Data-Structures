@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System;           
+using System.Collections.Generic;                
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace A5
     {
         static void Main(string[] args)
         {
-            ClosestPoints6(100, new long[]
+            ClosestPoints6(101, new long[]
                 { -36,
 575,
 -346,
