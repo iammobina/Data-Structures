@@ -2,7 +2,7 @@
 using System.Collections.Generic;                
 using System.IO;
 using System.Linq;
-using System.Text;
+using System.Text;      
 using System.Threading.Tasks;
 using TestCommon;
 
@@ -12,7 +12,7 @@ namespace A5
     {
         static void Main(string[] args)
         {
-            ClosestPoints6(101, new long[]
+            ClosestPoints6(100, new long[]
                 { -36,
 575,
 -346,
