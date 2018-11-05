@@ -56,8 +56,13 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="ProgramTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SlowLMTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -67,6 +72,47 @@
       <Project>{25F1FFD1-1EB4-429B-A7D7-BB35C22C67B8}</Project>
       <Name>Q1</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\Q1\In_1.txt" />
+    <Content Include="TestData\Q1\Out_1.txt" />
+    <Content Include="TestData\Q2\In_0.txt" />
+    <Content Include="TestData\Q2\In_1.txt" />
+    <Content Include="TestData\Q2\In_2.txt" />
+    <Content Include="TestData\Q2\In_3.txt" />
+    <Content Include="TestData\Q2\In_4.txt" />
+    <Content Include="TestData\Q2\In_5.txt" />
+    <Content Include="TestData\Q2\Out_0.txt" />
+    <Content Include="TestData\Q2\Out_1.txt" />
+    <Content Include="TestData\Q2\Out_2.txt" />
+    <Content Include="TestData\Q2\Out_3.txt" />
+    <Content Include="TestData\Q2\Out_4.txt" />
+    <Content Include="TestData\Q2\Out_5.txt" />
+    <Content Include="TestData\Q3\In_0.txt" />
+    <Content Include="TestData\Q3\In_1.txt" />
+    <Content Include="TestData\Q3\In_2.txt" />
+    <Content Include="TestData\Q3\In_3.txt" />
+    <Content Include="TestData\Q3\In_4.txt" />
+    <Content Include="TestData\Q3\In_5.txt" />
+    <Content Include="TestData\Q3\Out_0.txt" />
+    <Content Include="TestData\Q3\Out_1.txt" />
+    <Content Include="TestData\Q3\Out_2.txt" />
+    <Content Include="TestData\Q3\Out_3.txt" />
+    <Content Include="TestData\Q3\Out_4.txt" />
+    <Content Include="TestData\Q3\Out_5.txt" />
+    <Content Include="TestData\Q4\In_0.txt" />
+    <Content Include="TestData\Q4\In_1.txt" />
+    <Content Include="TestData\Q4\In_2.txt" />
+    <Content Include="TestData\Q4\In_3.txt" />
+    <Content Include="TestData\Q4\In_4.txt" />
+    <Content Include="TestData\Q4\In_5.txt" />
+    <Content Include="TestData\Q4\Out_0.txt" />
+    <Content Include="TestData\Q4\Out_1.txt" />
+    <Content Include="TestData\Q4\Out_2.txt" />
+    <Content Include="TestData\Q4\Out_3.txt" />
+    <Content Include="TestData\Q4\Out_4.txt" />
+    <Content Include="TestData\Q4\Out_5.txt" />
+    <Content Include="TestData\unigram_count_1w.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

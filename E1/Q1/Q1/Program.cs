@@ -9,9 +9,11 @@ namespace Q1
 {
     public class Program
     {
-
+        
         static void Main(string[] args)
         {
+            Load(@"E:\Exam1\TestData\testing.txt");
+            
         }
 
         public static WordCount[] Load(string filePath)
