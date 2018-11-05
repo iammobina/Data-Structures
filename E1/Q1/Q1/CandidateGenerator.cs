@@ -59,12 +59,12 @@ namespace Q1
             char[] CopyWord = new char[wordChars.Length];
 
             List<string> CopyWordR = new List<string>();
-            for(int l=0;l<word.Length;l++)
+            for(int l=0;l< wordChars.Length; l++)
             {
                 CopyWordR.Add(word);
             }
             //in this case i want to copy the elements of all 
-            for(int i=0;i<word.Length;i++)
+            for(int i=0;i< wordChars.Length; i++)
             {
                     int k = 0;
                     CopyWord[k] = wordChars[i];
@@ -83,7 +83,15 @@ namespace Q1
         {
             char[] wordChars = word.ToCharArray();
             char[] newWord = new char[wordChars.Length];
-            //TODO
+            char[] CopyElement=new char[wordChars.Length];
+            pos = 0;
+            for(int i=0;i<wordChars.Length;i++)
+            {
+                int k = 0;
+                CopyElement[k] = newWord[i];
+                k++;
+                //times up
+            }
             return new string(newWord);
         }
 
