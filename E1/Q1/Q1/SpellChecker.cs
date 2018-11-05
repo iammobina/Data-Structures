@@ -35,6 +35,14 @@ namespace Q1
                 new List<WordCount>();
 
             // TODO
+            List<string> EditDistance = CandidateGenerator.GetCandidates(misspelling).ToList();
+            ulong count = 0;
+            foreach(var candid in EditDistance)
+            {
+                LanguageModel.GetCount(candid, out count);
+                if (count != 0)
+                    candidates.Add(new WordCount(candid, count));
+            }
 
             return candidates
                     .OrderByDescending(x => x.Count)
@@ -70,3 +78,6 @@ namespace Q1
         }
     }
 }
+
+
+

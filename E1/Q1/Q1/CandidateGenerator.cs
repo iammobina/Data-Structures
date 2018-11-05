@@ -16,7 +16,22 @@ namespace Q1
         public static string[] GetCandidates(string word)
         {
             List<string> candidates = new List<string>();
-            //TODO
+            string Blank = "";
+
+            for (int j = 0; j <= word.Length; j++)
+                for (int i = 0; i < Alphabet.Length; i++)
+                    candidates.Add(Insert(word, j, Alphabet[i]));
+
+            for (int p = 0; p < word.Length; p++)
+                for (int q = 0; q < Alphabet.Length; q++)
+                {
+                    Blank = Delete(word, p);
+                    candidates.Add(Insert(Blank, p, Alphabet[q]));
+                }
+
+            for (int l = 0; l< word.Length; l++)
+                candidates.Add(Delete(word, l));
+
             return candidates.ToArray();
         }
 
@@ -27,27 +42,37 @@ namespace Q1
             char[] newWord = new char[wordChars.Length + 1];
             char[] CopyWord = new char[wordChars.Length];
             int lenghofTheWord = word.Length;
-            int k = 0;
-            for (int j=0;j<lenghofTheWord ; j++)
+
+            int j = 0;
+            for (int i = 0; i < newWord.Length; i++)
             {
-                CopyWord[k]  = wordChars[j];
-                k++;
-            }
-            string ConvertedString= Alphabet.ToString();
-            pos = 0;
-            foreach (var alphab in Alphabet)
-            {
-                for (int i = 0; i < Alphabet.Length; i++)
+                if (i != pos)
+                    newWord[i] = wordChars[j++];
+                else
                 {
-                    int m = 0;
-                    //first element should be alphabets 
-                    newWord[pos] = Alphabet[i];
-                    //then second element should be the old one
-                    pos++;
-                    newWord[pos] += CopyWord[m];
-                    m++;
+                    newWord[i] = c;
                 }
             }
+                
+            
+
+            string ConvertedString= Alphabet.ToString();
+            //Testing for The the Special Test
+
+            //foreach (var alphab in Alphabet)
+            //{
+            //    for (int i = 0; i < Alphabet.Length; i++)
+            //    {
+            //        int m = 0;
+            //        //first element should be alphabets 
+            //        newWord[pos] = Alphabet[i];
+            //        //then second element should be the old one
+            //        pos++;
+            //        newWord[pos] += CopyWord[m];
+            //       m++;
+            //    }
+            //}
+            
             return new string(newWord);
         }
 
@@ -66,17 +91,23 @@ namespace Q1
             //in this case i want to copy the elements of all 
             for(int i=0;i< wordChars.Length; i++)
             {
-                    int k = 0;
-                    CopyWord[k] = wordChars[i];
-                    k++;
+                    int h = 0;
+                    CopyWord[h] = wordChars[i];
+                    h++;
                // CopyWord.Add(word.IndexOf(i));
             }
-            foreach(var s in word)
-            {
-                CopyWordR.RemoveAt(CopyWordR.IndexOf(s.ToString()));
-            }
-            //  return new string(newWord);
-            return CopyWordR.ToString();
+            int k = 0;
+
+            for (int i = 0, j = 0; i < wordChars.Length; i++)
+                if (i != pos)
+                {
+                    newWord[k++] = wordChars[i];
+                }
+                    
+
+          
+            return new string(newWord);
+           //return CopyWordR.ToString();
         }
 
         private static string Substitute(string word, int pos, char c)
@@ -84,14 +115,17 @@ namespace Q1
             char[] wordChars = word.ToCharArray();
             char[] newWord = new char[wordChars.Length];
             char[] CopyElement=new char[wordChars.Length];
-            pos = 0;
-            for(int i=0;i<wordChars.Length;i++)
+
+            for (int i = 0; i < newWord.Length; i++)
             {
-                int k = 0;
-                CopyElement[k] = newWord[i];
-                k++;
-                //times up
+                if (i != pos)
+                    newWord[i] = wordChars[i];
+                else
+                    newWord[i] = wordChars[pos];
+
             }
+
+            //Times up
             return new string(newWord);
         }
 

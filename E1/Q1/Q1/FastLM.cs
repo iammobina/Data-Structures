@@ -13,8 +13,8 @@ namespace Q1
 
         public FastLM(WordCount[] wordCounts)
         {
-           //inja bar asase kalame ha sort shode
-           //W bozorg sort shode
+            //inja bar asase kalame ha sort shode
+            //W bozorg sort shode
             this.WordCounts = wordCounts.OrderBy(wc => wc.Word).ToArray();
         }
 
@@ -22,45 +22,37 @@ namespace Q1
         {
             count = 0;
             bool Answer = false;
+            //useless
             List<string> HalfWords = new List<string>();
-            for(ulong m =0;m<count;m++)
+            for (ulong m = 0; m < count; m++)
             {
                 HalfWords.Add(word);
             }
-           
+
             //useless
             List<string> AnotherHalfWords = new List<string>();
 
-            for (ulong i = count/2; i < count; i++)
+            for (ulong i = count / 2; i < count; i++)
             {
                 AnotherHalfWords.Add(word);
             }
-            foreach (var numb in WordCounts)
+            ulong low = 0;
+            ulong high = (ulong)WordCounts.Length;
+
+            while (low <= high)
             {
-                ulong low = 0;
-                ulong high = (ulong)WordCounts.Length;
-                ulong middle1 = (high + low / 2) + low;
-                foreach (var s in word)
+                ulong middle = (high - low) / 2 + low;
+                if (word == WordCounts[middle].Word.ToString())
                 {
-                    while (true)
-                    {
-                        ulong middle = (high + low / 2) + low;
-                        if ((low < high) || (middle > (ulong)WordCounts.Length))
-                        {
-                            Answer = false;
-                        }
-                        if (word == HalfWords[(int)middle])
-                        {
-                            Answer = true;
-                        }
-                    }  
+                    count = WordCounts[middle].Count;
+                    return true;
                 }
-                if (low < middle1)
-                    low = middle1 - 1;
+                if (string.Compare(WordCounts[middle].Word, word) > 0)
+                    high = middle - 1;
                 else
-                    low = middle1 + 1;
+                    low = middle + 1;
             }
-            return Answer;
+            return false;
         }
     }
 }
