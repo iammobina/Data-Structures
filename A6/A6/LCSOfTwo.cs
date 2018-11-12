@@ -17,18 +17,22 @@ namespace A6
         public long Solve(long[] seq1, long[] seq2)
         {
             //Write your code here
-            long[,] Answer = new long[seq1.Length+1, seq2.Length + 1];
+            long[,] Solve = new long[seq1.Length + 1, seq2.Length + 1];
+
             for (int i = 0; i <= seq1.Length; i++)
             {
                 for (int j = 0; j <= seq2.Length; j++)
                 {
-                    if (seq1[i - 1] == seq2[j - 1])
-                        Answer[i, j] = Answer[i - 1, j - 1] + 1;
+                    if (i == 0 || j == 0)
+                        Solve[i, j] = 0;
+
+                    else if (seq1[i - 1] == seq2[j - 1])
+                        Solve[i, j] = Solve[i - 1, j - 1] + 1;
                     else
-                        Answer[i, j] = Math.Max(Answer[i - 1, j], Answer[i, j - 1]);
+                        Solve[i, j] = Math.Max(Solve[i - 1, j], Solve[i, j - 1]);
                 }
             }
-            return Answer[seq1.Length, seq2.Length];
+            return Solve[seq1.Length, seq2.Length];
         }
     }
 }

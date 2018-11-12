@@ -33,17 +33,16 @@ namespace A6
                         //For Finding Minimum Math.min can take only two parametr
                         //Better to use your own 
                         if (str1[i - 1] == str2[j - 1])
-                            editDistance[i, j] =MathMin3params(editDistance[i - 1, j] + 1,
-                                editDistance[i, j - 1] + 1,
-                                editDistance[i - 1, j - 1]);
-                        else
                             editDistance[i, j] = MathMin3params(editDistance[i - 1, j] + 1,
                                 editDistance[i, j - 1] + 1,
-                                editDistance[i - 1, j - 1] + 1);
+                                editDistance[i - 1, j - 1]);
+                    }
+                    else
+                        editDistance[i, j] = MathMin3params(editDistance[i - 1, j] + 1,
+                            editDistance[i, j - 1] + 1,
+                            editDistance[i - 1, j - 1] + 1);
                     }
                 }
-            }
-
             return editDistance[str1.Length, str2.Length];
         }
 

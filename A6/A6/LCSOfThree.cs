@@ -17,7 +17,7 @@ namespace A6
         public long Solve(long[] seq1, long[] seq2, long[] seq3)
         {
             //Write your code here
-
+            //-- instead of using this[,] i insist to use this one [][]
             long[][][] answers = new long[seq1.Length + 1][][];
             for (int i = 0; i < seq1.Length + 1; i++)
             {
