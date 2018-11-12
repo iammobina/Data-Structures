@@ -68,16 +68,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\TestCommon\TestCommon.csproj">
-      <Project>{c39ff0c4-6960-42ad-8e2c-d2cafe850a52}</Project>
-      <Name>TestCommon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\A6\A6.csproj">
-      <Project>{BD590FC4-F7E1-435F-B283-6C04F28F1881}</Project>
-      <Name>A6</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="TestData\TD1\In_1.txt" />
     <Content Include="TestData\TD1\In_2.txt" />
     <Content Include="TestData\TD1\In_3.txt" />
@@ -118,6 +108,16 @@
     <Content Include="TestData\TD5\Out_3.txt" />
     <Content Include="TestData\TD5\Out_4.txt" />
     <Content Include="TestData\TD5\Out_5.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\TestCommon\TestCommon.csproj">
+      <Project>{C39FF0C4-6960-42AD-8E2C-D2CAFE850A52}</Project>
+      <Name>TestCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\A6\A6.csproj">
+      <Project>{bd590fc4-f7e1-435f-b283-6c04f28f1881}</Project>
+      <Name>A6</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
