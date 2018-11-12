@@ -2,11 +2,11 @@
 using System;
 using System.Collections.Generic;   
 using System.IO;
-using System.Linq;
+using System.Linq; 
 
 namespace TestCommon
 {
-    public static class TestTools 
+    public static class TestTools   
     {
         private static readonly char[] IgnoreChars = new char[] { '\n', '\r', ' ' };
         private static readonly char[] NewLineChars = new char[] { '\n', '\r'};
