@@ -10,7 +10,7 @@ namespace A7
     {
         static void Main(string[] args)
         {
-            //A way to Debug a class
+            //A way to Debug a class     
 
             //MaximumGold Test = new MaximumGold("In_1");
             //Test.Solve(10, new long[] { 1 ,4, 8 });
