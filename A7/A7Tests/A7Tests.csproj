@@ -68,10 +68,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\git\96522321\DS97981\Common\TestCommon\TestCommon.csproj">
-      <Project>{c39ff0c4-6960-42ad-8e2c-d2cafe850a52}</Project>
-      <Name>TestCommon</Name>
-    </ProjectReference>
     <ProjectReference Include="..\A7\A7.csproj">
       <Project>{35F03A67-04B1-47B4-A707-F939A83F275F}</Project>
       <Name>A7</Name>
