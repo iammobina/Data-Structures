@@ -18,8 +18,8 @@ namespace A8.Tests
         {
             Processor[] problems = new Processor[] {
                 new CheckBrackets("TD1"),
-               // new TreeHeight("TD2"),
-               //new PacketProcessing("TD3")
+                new TreeHeight("TD2"),
+               new PacketProcessing("TD3")
             };
             
             foreach (var p in problems)
