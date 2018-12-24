@@ -42,8 +42,8 @@ namespace E2
            
             for (int i = 0; i < HashFunctions.Length; i++)
             {
-                int index = MyHashFunction(str, 0, str.Length, ChosenX[i]);
-                Filter[index] = true;
+                int numb = MyHashFunction(str, 0, str.Length, ChosenX[i]);
+                Filter[numb] = true;
             }
 
         }
@@ -51,15 +51,15 @@ namespace E2
         public bool Test(string str)
         {
 
-            int counter = 0;
+            int count = 0;
             for (int i = 0; i < HashFunctions.Length; i++)
             {
-                int index = MyHashFunction(str, 0, str.Length, ChosenX[i]);
-                if (Filter[index])
-                    counter++;
+                int numb = MyHashFunction(str, 0, str.Length, ChosenX[i]);
+                if (Filter[numb])
+                    count++;
             }
 
-            if (counter == HashFunctions.Length)
+            if (count == HashFunctions.Length)
                 return true;
             else
                 return false;
