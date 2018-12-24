@@ -8,35 +8,61 @@ namespace E2
     {
         BitArray Filter;
         Func<string, int>[] HashFunctions;
+        public static int[] ChosenX = new int[] { 150, 110, 56, 99, 101, 95, 25, 356, 100, 78, 333 };
 
         public Q3BloomFilter(int filterSize, int hashFnCount)
         {
             // زحمت بکشید پیاده سازی کنید
 
-            Random rnd = new Random();
             Filter = new BitArray(filterSize);
             HashFunctions = new Func<string, int>[hashFnCount];
-
             for (int i = 0; i < HashFunctions.Length; i++)
             {
-                HashFunctions[i] = str => MyHashFunction(str, rnd.Next());
+                HashFunctions[i] = str => MyHashFunction(str, 0, str.Length, ChosenX[i]);
             }
         }
 
-        public int MyHashFunction(string str, int num)
+        public const int BigPrimeNumber = 1000000007;
+
+        public int MyHashFunction(
+            string str, int start, int count, int x,
+            int p = BigPrimeNumber)
         {
-            return str.GetHashCode() + num;
+            int hash = 0;
+
+            for (int i = str.Length - 1; i >= 0; i--)
+                hash = (((hash * x + str[i]) % p) + p) % p;
+
+            return (hash) % Filter.Count;
         }
+
 
         public void Add(string str)
         {
-            // زحمت بکشید پیاده سازی کنید
+           
+            for (int i = 0; i < HashFunctions.Length; i++)
+            {
+                int numb = MyHashFunction(str, 0, str.Length, ChosenX[i]);
+                Filter[numb] = true;
+            }
+
         }
 
         public bool Test(string str)
         {
-            // زحمت بکشید پیاده سازی کنید
-            return true;
+
+            int count = 0;
+            for (int i = 0; i < HashFunctions.Length; i++)
+            {
+                int numb = MyHashFunction(str, 0, str.Length, ChosenX[i]);
+                if (Filter[numb])
+                    count++;
+            }
+
+            if (count == HashFunctions.Length)
+                return true;
+            else
+                return false;
         }
     }
 }
