@@ -38,5 +38,19 @@ namespace E2
             // زحمت بکشید پیاده سازی کنید
             return true;
         }
+
+        public const long BigPrimeNumber = 1000000007;
+        public const long ChosenX = 263;
+
+        public static long PolyHash(string str, long start, long count,
+            long p = BigPrimeNumber, long x = ChosenX)
+        {
+            long hash = 0;
+            for (int i = (int)(start + count - 1); i >= start; i--)
+            {
+                hash = ((hash * x + str[i] % p) + p) % p;
+            }
+            return hash;
+        }
     }
 }

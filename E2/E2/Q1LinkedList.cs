@@ -47,6 +47,22 @@ namespace E2
         {
             // زحمت بکشید پیاده سازی کنید
             // اگر نیاز بود میتوانید متد اضافه کنید
+
+            while(Tail.Next == null)
+            {
+                //3-5-9
+                //9 
+                //تمش اینجوریه حالا باز دقیق ترشو فک کن بعد پیاده
+                Node temp = new Node(Tail.Key);//9
+                //temp prev next =null
+                temp.Next = Tail.Prev;//5
+                temp.Next.Next.Key = Head.Key;//3
+                Reverse();
+                //                              //thanks god
+                //temp.Next = Tail.Prev;//5
+                //temp.Next.Next.Key = Head.Key;//3
+            }
+           
         }
 
         public void DeepReverse()

@@ -22,7 +22,10 @@ namespace E2
 
         public int TreeHeight()
         {
-            return 0;
+            List<int> Root = Nodes[0];
+            
+
+            
         }
 
         public int TreeHeightFromNode(int node)
@@ -40,7 +43,7 @@ namespace E2
             return 0;
         }
 
-        private static List<int>[] GenerateRandomTree(int size, int seed)
+        public static List<int>[] GenerateRandomTree(int size, int seed)
         {
             Random rnd = new Random(seed);
             List<int>[] nodes = Enumerable.Range(0, size)
@@ -66,5 +69,28 @@ namespace E2
             }
             return nodes;
         }
+        //public long[] InOrder(List<int>[] root)
+        //{//left root right
+        //    if (root == null)
+        //        return new long[] { 0 };
+
+        //    List<long> Answer = new List<long>();
+        //    Stack<List<int>> s = new Stack<List<int>>();
+        //    List<int> current = root[0];
+
+        //    while (current != null || s.Count > 0)
+        //    {
+        //        while (current != null)
+        //        {
+        //            s.Push(current);
+        //            current = current.left;
+        //        }
+        //        current = s.Pop();
+        //        Answer.Add(current.Data);
+
+
+        //        current = current.right;
+        //    }
+
+        }
     }
-}
