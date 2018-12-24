@@ -20,35 +20,38 @@ namespace E2
             Random rnd = new Random(0);
 
             // Try one random value
-            List<uint> diffrentNumbers = new List<uint>();
-            for (uint i = 0; i < uint.MaxValue; i++)
-            {
-                diffrentNumbers.Add(i);
-            }
+            //List<uint> diffrentNumbers = new List<uint>();
+            //for (uint i = 0; i < uint.MaxValue; i++)
+            //{
+            //    diffrentNumbers.Add(i);
+            //}
 
 
             //برای اینکه نانس رو پیدا بکنیم چون واحد ما unit است میتوانیم 
             //با یک فور تمام حالات را بررسی کنیم
-            for(uint i=0;i<diffrentNumbers.Count;i++)
-            {
-                nonce = i;
-            }
-
+            //for(uint i=0;i<diffrentNumbers.Count;i++)
+            //{
+            //    nonce = i;
+            //}
+            int zeroBytes = 0;
             nonce =(uint) rnd.Next(0, int.MaxValue);
             // Copy nonce to the end of data
 
             //    nonce = BestNonce();
             //foreach (var element in diffrentNumbers)
             //{
-              //  nonce = BestNonce(data);
+            //
+            //nonce = BestNonce(data);
+            do {
+                nonce = (uint)rnd.Next(0, int.MaxValue);
                 BitConverter.GetBytes(nonce).CopyTo(data, sizeof(uint));
                 // Calculate Hash
                 byte[] doubleHash = Hasher.ComputeHash(Hasher.ComputeHash(data));
 
                 // How many zero bytes does it have at the end?
-                int zeroBytes = CountEndingZeroBytes(doubleHash, difficultyLevel);
+                 zeroBytes = CountEndingZeroBytes(doubleHash, difficultyLevel);
 
-                //} while (zeroBytes >= difficultyLevel);
+                } while (zeroBytes < difficultyLevel);
                 //HowManyZero.Add(zeroBytes);
 
                 //do

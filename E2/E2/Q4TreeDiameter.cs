@@ -23,7 +23,7 @@ namespace E2
         public int TreeHeight()
         {
             List<int> Root = Nodes[0];
-            
+            return 0;
 
             
         }

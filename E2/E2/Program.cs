@@ -10,13 +10,13 @@ namespace E2
     {
         static void Main(string[] args)
         {
-            //Q1LinkedList q = new Q1LinkedList();
-            //q.Insert(3);
-            //q.Insert(5);
-            //q.Insert(9);
-            //q.Reverse();
+            Q1LinkedList q = new Q1LinkedList();
+            q.Insert(3);
+            q.Insert(5);
+            q.Insert(9);
+            q.Reverse();
 
-            Q4TreeDiameter tt = new Q4TreeDiameter(4);
+         //   Q4TreeDiameter tt = new Q4TreeDiameter(4);
             
         }
     }
