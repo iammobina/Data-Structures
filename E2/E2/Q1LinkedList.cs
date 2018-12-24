@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace E2
-{
+{       
 
     public class Q1LinkedList
     {
