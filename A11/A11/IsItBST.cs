@@ -22,19 +22,47 @@ namespace A11
             long[] Answer = new long[nodes.Length];
             Answer =InOrder(root);
 
-            //Stack<Node> s = new Stack<Node>();
-            //Node node = root[0];
+           
+            Node node = root[0];
             //s.Push(node);
             //while (s.Count > 0)
             //{
             //    Node current = s.Pop();
             //}
-            if (Checked(Answer))
-                return true;
+            //if (Checked(Answer))
+            //    return true;
 
-            return false;
+            //return false;
+            Stack<Node> s = new Stack<Node>();
+            s.Push(node);
+            while (s.Count > 0)
+            {
+                Node current = s.Pop();
+                if (current != null)
+                {
+                    if (current == current.root.left)
+                    {
+                        current.max = current.root.Data;
+                        current.min = current.root.min;
+                    }
+                    else
+                    {
+                        current.max = current.root.max;
+                        current.min = current.root.min;
+                    }
+                }
+                if (current.Data > current.max || current.Data < current.min)
+                    return false;
+                if (current.right != null)
+                    s.Push(current.right);
+                if (current.left != null)
+                    s.Push(current.left);
+            }
 
-        }
+            return true;
+        
+
+    }
         public Node[] LoadTree(long[][] nodes)
         {
             Node[] root = new Node[nodes.Length];
