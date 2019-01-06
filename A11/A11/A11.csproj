@@ -44,12 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryTreeTraversals.cs" />
+    <Compile Include="BST.cs" />
     <Compile Include="IsItBST.cs" />
     <Compile Include="IsItBSTHard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rope.cs" />
     <Compile Include="SetWithRageSums.cs" />
+    <Compile Include="SplayTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

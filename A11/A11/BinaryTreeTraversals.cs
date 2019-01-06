@@ -8,10 +8,14 @@ namespace A11
     public class Node
     {
         public long Data;
-        public Node left, right,root;
+        public Node left, right, root;
+        public long min = long.MinValue;
+        public long max=long.MaxValue;
+
+
         public Node(long data)
         {
-            Data = data;
+           Data = data;
            root= left = right = null;
         }
 
@@ -30,7 +34,7 @@ namespace A11
         {
 
             Node[] BinaryTree = LoadTree(nodes);
-            return new long[3][] { InOrder(BinaryTree), PostOrder(BinaryTree), PreOrder(BinaryTree) };
+            return new long[3][] { InOrder(BinaryTree), PreOrder(BinaryTree), PostOrder(BinaryTree)};
 
 
         }
@@ -51,7 +55,7 @@ namespace A11
                 }
 
                 root = stack.Pop();
-                if (root.right != null && stack.Peek() == root.right)
+                if (root.right != null && stack.Count>0 && stack.Peek() == root.right)
                 {
                     stack.Pop();
                     stack.Push(root);
@@ -102,8 +106,6 @@ namespace A11
                 }
                 current = s.Pop();
                 Answer.Add(current.Data);
-                
-
                 current = current.right;
             }
 

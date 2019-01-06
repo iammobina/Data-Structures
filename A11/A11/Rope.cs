@@ -13,7 +13,7 @@ namespace A11
 
         public string Solve(string text, long[][] queries)
         {
-            foreach(var q in queries)
+            foreach (var q in queries)
             {
                 int i = (int)q[0],
                     j = (int)q[1],
@@ -27,4 +27,5 @@ namespace A11
             return text;
         }
     }
+    //splay tree pdf
 }
