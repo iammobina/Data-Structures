@@ -18,6 +18,7 @@ namespace A11
             Node node = root[0];
             if (root.Length == 0)
                 return true;
+
             Stack<Node> s = new Stack<Node>();
             s.Push(node);
             while (s.Count > 0)
