@@ -16,14 +16,10 @@ namespace A11
         {
             //postorderr+max o min nodes
             //inorder traversal +check it
-            Node[] root = LoadTree(nodes);
             
             //List<long> Inorder = new List<long>();
             long[] Answer = new long[nodes.Length];
-            Answer =InOrder(root);
 
-           
-            Node node = root[0];
             //s.Push(node);
             //while (s.Count > 0)
             //{
@@ -33,6 +29,10 @@ namespace A11
             //    return true;
 
             //return false;
+            Node[] root = LoadTree(nodes);
+            Node node = root[0];
+            if (root.Length == 0)
+                return true;
             Stack<Node> s = new Stack<Node>();
             s.Push(node);
             while (s.Count > 0)
@@ -58,11 +58,9 @@ namespace A11
                 if (current.left != null)
                     s.Push(current.left);
             }
-
             return true;
-        
-
-    }
+        }
+    
         public Node[] LoadTree(long[][] nodes)
         {
             Node[] root = new Node[nodes.Length];
