@@ -16,8 +16,11 @@ namespace A12
             // Your code here
             //سر این تمرین کلافه شدممم و خسته خاستم پیاده سازی متنوع انجام بدم مثلللللللللللن
             List<long>[] DirectedGraph = LoadGraph(nodeCount, edges);
+            bool[] visit = new bool[nodeCount + 1];
+            bool[] Connected = new bool[nodeCount + 1];
+
             for (long i = 1; i <= nodeCount; i++)
-                if (CyclicGraph(DirectedGraph,nodeCount,i)==true)
+                if (CyclicGraph(DirectedGraph,nodeCount,i,Connected,visit)==true)
                     return 1;
 
             return 0;
@@ -38,11 +41,9 @@ namespace A12
             }
             return Connecting;
         }
-        public static bool CyclicGraph(List<long>[] graph, long nodeCount,long i)
+        public static bool CyclicGraph(List<long>[] graph, long nodeCount,long i,bool[] Connected, bool[] visit)
         {
-            bool[] visit= new bool[nodeCount + 1];
-            bool[] Connected = new bool[nodeCount + 1];
-
+           
             if (Connected[i]==true)
                 return true;
 
@@ -53,7 +54,7 @@ namespace A12
             visit[i] = true;
 
             foreach (var v in graph[i])
-                if (CyclicGraph(graph,nodeCount,v))
+                if (CyclicGraph(graph,nodeCount,v,Connected,visit))
                     return true;
 
             Connected[i] = false;
