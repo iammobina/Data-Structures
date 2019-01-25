@@ -16,6 +16,7 @@ namespace A11
         {
             Node[] root = LoadTree(nodes);
             Node node = root[0];
+            Node temp;
             if (root.Length == 0)
                 return true;
 
@@ -23,26 +24,26 @@ namespace A11
             s.Push(node);
             while (s.Count > 0)
             {
-                Node current = s.Pop();
-                if (current != null)
+                temp = s.Pop();
+                if (temp.root != null)
                 {
-                    if (current == current.root.left)
+                    if (temp == temp.root.left)
                     {
-                        current.max = current.root.Data - 1;
-                        current.min = current.root.min;
+                        temp.max = temp.root.Data - 1;
+                        temp.min = temp.root.min;
                     }
                     else
                     {
-                        current.max = current.root.max;
-                        current.min = current.root.min;
+                        temp.max = temp.root.max;
+                        temp.min = temp.root.Data;
                     }
                 }
-                if (current.Data > current.max || current.Data < current.min)
+                if (temp.Data > temp.max || temp.Data < temp.min)
                     return false;
-                if (current.right != null)
-                    s.Push(current.right);
-                if (current.left != null)
-                    s.Push(current.left);
+                if (temp.right != null)
+                    s.Push(temp.right);
+                if (temp.left != null)
+                    s.Push(temp.left);
             }
             return true;
         }
