@@ -19,7 +19,7 @@ namespace A11.Tests
             Assert.Inconclusive();
             Processor[] problems = new Processor[] {
                // new BinaryTreeTraversals("TD1"),
-                new IsItBST("TD2"),
+                //new IsItBST("TD2"),
                // new IsItBSTHard("TD3"),
                 //new SetWithRageSums("TD4"),
                 //new Rope("TD5")
