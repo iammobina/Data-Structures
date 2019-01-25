@@ -18,33 +18,33 @@ namespace A11
             Node node = root[0];
             Node temp;
             if (root.Length == 0)
-                return true;
+            //    return true;
 
-            Stack<Node> s = new Stack<Node>();
-            s.Push(node);
-            while (s.Count > 0)
-            {
-                temp = s.Pop();
-                if (temp.root != null)
-                {
-                    if (temp == temp.root.left)
-                    {
-                        temp.max = temp.root.Data - 1;
-                        temp.min = temp.root.min;
-                    }
-                    else
-                    {
-                        temp.max = temp.root.max;
-                        temp.min = temp.root.Data;
-                    }
-                }
-                if (temp.Data > temp.max || temp.Data < temp.min)
-                    return false;
-                if (temp.right != null)
-                    s.Push(temp.right);
-                if (temp.left != null)
-                    s.Push(temp.left);
-            }
+            //Stack<Node> s = new Stack<Node>();
+            //s.Push(node);
+            //while (s.Count > 0)
+            //{
+            //    temp = s.Pop();
+            //    if (temp.root != null)
+            //    {
+            //        if (temp == temp.root.left)
+            //        {
+            //            temp.max = temp.root.Data - 1;
+            //            temp.min = temp.root.min;
+            //        }
+            //        else
+            //        {
+            //            temp.max = temp.root.max;
+            //            temp.min = temp.root.Data;
+            //        }
+            //    }
+            //    if (temp.Data > temp.max || temp.Data < temp.min)
+            //        return false;
+            //    if (temp.right != null)
+            //        s.Push(temp.right);
+            //    if (temp.left != null)
+            //        s.Push(temp.left);
+            //}
             return true;
         }
         public Node[] LoadTree(long[][] nodes)
