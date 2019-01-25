@@ -16,9 +16,9 @@ namespace A11
         {
             Node[] root = LoadTree(nodes);
             Node node = root[0];
-            Node temp;
-            if (root.Length == 0)
-            //    return true;
+            //Node temp;
+            //if (root.Length == 0)
+            //   return true;
 
             //Stack<Node> s = new Stack<Node>();
             //s.Push(node);
