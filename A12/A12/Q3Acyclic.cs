@@ -15,8 +15,12 @@ namespace A12
         {
             // Your code here
             //سر این تمرین کلافه شدممم و خسته خاستم پیاده سازی متنوع انجام بدم مثلللللللللللن
-            List<long>[] DirectedGraph = new List<long>[nodeCount+1];
-            return CyclicGraph(DirectedGraph,nodeCount);
+            List<long>[] DirectedGraph = LoadGraph(nodeCount, edges);
+            for (long i = 1; i <= nodeCount; i++)
+                if (CyclicGraph(DirectedGraph,nodeCount,i)==true)
+                    return 1;
+
+            return 0;
         }
 
         public List<long>[] LoadGraph(long nodeCount, long[][] edges)
@@ -34,38 +38,59 @@ namespace A12
             }
             return Connecting;
         }
-
-        private static long CyclicGraph(List<long>[] DirectedGraphy,long nodeCount)
+        public static bool CyclicGraph(List<long>[] graph, long nodeCount,long i)
         {
-            long[] visited = new long[nodeCount+1];
-            long[] RecursionCall = new long[nodeCount+1];
-            for (int i = 0; i <= nodeCount; i++)
-            {
-                if (visited[i] == 0)
-                {
-                    //if(CyclicGraph(i)==true)
-                    if (dfs(DirectedGraphy, i, visited, RecursionCall,nodeCount) == 1)
-                        return 1;
-                }
-            }
-            return 0;
+            bool[] visit= new bool[nodeCount + 1];
+            bool[] Connected = new bool[nodeCount + 1];
+
+            if (Connected[i]==true)
+                return true;
+
+            if (visit[i]==true)
+                return false;
+
+            Connected[i] = true;
+            visit[i] = true;
+
+            foreach (var v in graph[i])
+                if (CyclicGraph(graph,nodeCount,v))
+                    return true;
+
+            Connected[i] = false;
+            return false;
         }
 
-        private static int dfs(List<long>[] DirectedGraphy, long x, long[] visited, long[] recall, long nodeCount)
-        {
+        //private static long CyclicGraph(List<long>[] DirectedGraphy,long nodeCount)
+        //{
+        //    long[] visited = new long[nodeCount+1];
+        //    long[] RecursionCall = new long[nodeCount+1];
+        //    for (int i = 0; i <= nodeCount; i++)
+        //    {
+        //        if (visited[i] == 0)
+        //        {
+        //            //if(CyclicGraph(i)==true)
+        //            if (dfs(DirectedGraphy, i, visited, RecursionCall,nodeCount) == 1)
+        //                return 1;
+        //        }
+        //    }
+        //    return 0;
+        //}
 
-            visited[x] = 1;
-            recall[x] = 1;
+        //private static int dfs(List<long>[] DirectedGraphy, long x, long[] visited, long[] recall, long nodeCount)
+        //{
 
-            for (int i = 0; i <= nodeCount; i++)
-            {
-                if (visited[i] == 0 && dfs(DirectedGraphy, i, visited, recall, nodeCount) == 1)
-                    return 1;
-                else if (recall[i] == 1)
-                    return 1;
-            }
-            recall[x] = 0;
-            return 0;
-        }
+        //    visited[x] = 1;
+        //    recall[x] = 1;
+
+        //    for (int i = 0; i <= nodeCount; i++)
+        //    {
+        //        if (visited[i] == 0 && dfs(DirectedGraphy, i, visited, recall, nodeCount) == 1)
+        //            return 1;
+        //        else if (recall[i] == 1)
+        //            return 1;
+        //    }
+        //    recall[x] = 0;
+        //    return 0;
+        //}
     }
 }
