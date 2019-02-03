@@ -21,8 +21,8 @@ namespace A1.Tests
 
         [TestMethod(), Timeout(1000)]
         [DeploymentItem("TestData", "TestData")]
-        public void GradedTest()
-        {
+        public void GradedTest() //Grade:A1:100
+        {// چرا عوض کردن تست؟
             Assert.IsTrue(Directory.Exists("TestData"));
             string[] inFiles = Directory.GetFiles("TestData", "*In_*.txt");
 
