@@ -10,7 +10,7 @@ namespace A6.Tests
 <<<<<<< HEAD
         [TestMethod(), Timeout(1000)]//Timeout???
 =======
-        [TestMethod()]//Timeout???
+      //  [TestMethod()]//Timeout???
 >>>>>>> master
         [DeploymentItem("TestData","A6_TestData")]
         public void SolveTest()
