@@ -4,10 +4,10 @@ using A6;
 
 namespace A6.Tests
 {
-    [TestClass()]
+    [TestClass()]//Grade:A6:0
     public class GradedTests
     {
-        [TestMethod()]
+        [TestMethod()]//Timeout???
         [DeploymentItem("TestData","A6_TestData")]
         public void SolveTest()
         {
