@@ -7,11 +7,7 @@ namespace A6.Tests
     [TestClass()]//Grade:A6:0
     public class GradedTests
     {
-<<<<<<< HEAD
         [TestMethod(), Timeout(1000)]//Timeout???
-=======
-      //  [TestMethod()]//Timeout???
->>>>>>> master
         [DeploymentItem("TestData","A6_TestData")]
         public void SolveTest()
         {
