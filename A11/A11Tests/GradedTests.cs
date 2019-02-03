@@ -12,14 +12,14 @@ namespace A11.Tests
     [TestClass()]//Grade:A11:0
     public class GradedTests
     {
-        [TestMethod()]//Timeout???
+        [TestMethod(), Timeout(2000)]//Timeout???
         [DeploymentItem("TestData", "A11_TestData")]
         public void SolveTest()
         {
             Assert.Inconclusive();
             Processor[] problems = new Processor[] {
-               // new BinaryTreeTraversals("TD1"),
-                //new IsItBST("TD2"),
+                new BinaryTreeTraversals("TD1"),
+                new IsItBST("TD2"),
                // new IsItBSTHard("TD3"),
                 //new SetWithRageSums("TD4"),
                 //new Rope("TD5")
