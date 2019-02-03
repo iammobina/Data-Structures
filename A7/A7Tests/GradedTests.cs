@@ -1,0 +1,28 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using A7;
+using TestCommon;
+
+namespace A7.Tests
+{
+    [TestClass()]//Grade:A7:100
+    public class GradedTests
+    {
+        [TestMethod(),Timeout(1000)]
+        [DeploymentItem("TestData", "A7_TestData")]
+        public void SolveTest()
+        {
+            Processor[] problems = new Processor[] {
+                new MaximumGold("TD1"),
+                new PartitioningSouvenirs("TD2"),
+                new MaximizingArithmeticExpression("TD3")
+            };
+
+            foreach (var p in problems)
+            {
+                TestTools.RunLocalTest("A7", p.Process, p.TestDataName);
+            }
+        }
+    }
+}
+
+
