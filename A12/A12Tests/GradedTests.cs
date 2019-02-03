@@ -12,11 +12,12 @@ namespace A12.Tests
     [TestClass()]//Grade:A12:0
     public class GradedTests
     {
-        [TestMethod()]//Timeout???
+        [TestMethod(), Timeout(30000)]//Timeout???
+
         [DeploymentItem("TestData", "A12_TestData")]
         public void SolveTest()
         {
-           
+            
             Processor[] problems = new Processor[] {
                 new Q1MazeExit("TD1"),
                 new Q2AddExitToMaze("TD2"),
