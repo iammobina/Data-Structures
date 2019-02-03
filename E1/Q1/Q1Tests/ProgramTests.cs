@@ -41,7 +41,7 @@ namespace Q1.Tests
             });
         }
 
-        [TestMethod()]
+        [TestMethod(),Timeout(1000)]
         public void Graded_FastLM_GetCountTest()
         {
             Validator("Q1", (inFile, outFile) =>
